@@ -37,12 +37,12 @@ public class MovieModel {
     try{
             int jmlData = 0;
             
-            String data[][] = new String[getBanyakData()][5]; //baris, kolom nya ada 4
+            String data[][] = new String[getBanyakData()][5]; 
             
             String query = "Select * from movie"; 
             ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()){
-                data[jmlData][0] = resultSet.getString("judul"); //harus sesuai nama kolom di mysql
+                data[jmlData][0] = resultSet.getString("judul"); 
                 data[jmlData][1] = resultSet.getString("alur");                
                 data[jmlData][2] = resultSet.getString("penokohan");
                 data[jmlData][3] = resultSet.getString("akting");
@@ -77,7 +77,7 @@ public class MovieModel {
                 query = "INSERT INTO movie VALUES('"+judul+"','"+falur+"','"+fpenokohan+"','"+fakting+"','"+nilai+"')";
            
                 statement = (Statement) koneksi.createStatement();
-                statement.executeUpdate(query); //execute querynya
+                statement.executeUpdate(query); 
                 System.out.println("Berhasil ditambahkan");
                 JOptionPane.showMessageDialog(null, "Data Berhasil ditambahkan");
             }
@@ -109,7 +109,7 @@ public class MovieModel {
              if (jmlData==1) {
                 query = "UPDATE movie SET alur='" + falur + "', penokohan='" + fpenokohan + "', nilai='" + nilai + "', akting = '" + akting +"' WHERE judul='" + judul +"'";
                 statement = (Statement) koneksi.createStatement();
-                statement.executeUpdate(query); //execute querynya
+                statement.executeUpdate(query); 
                 System.out.println("Berhasil diupdate");
                 JOptionPane.showMessageDialog(null, "Data Berhasil diupdate");
              }
