@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Orenji
+ * @author ridwa
  */
 public class MovieView extends JFrame{
     JLabel ljudul = new JLabel("Judul");
